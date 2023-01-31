@@ -82,7 +82,7 @@ CHECK() {
 
 INSTALL() {
     # 下载 Alist 程序
-    echo -e "\r\n${GREEN_COLOR}下载 Alist v2.6.4 ...${RES}"
+    echo -e "\r\n${GREEN_COLOR}下载 Alist v3.9.2 ...${RES}"
     curl -L https://github.com/alist-org/alist/releases/download/v3.9.2/alist-linux-musl-$ARCH.tar.gz -o /tmp/alist.tar.gz $CURL_BAR
     tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/
     
@@ -172,7 +172,7 @@ UPDATE() {
         systemctl stop alist
         # 备份 alist 二进制文件，供下载更新失败回退
         cp $INSTALL_PATH/alist /tmp/alist.bak
-        echo -e "${GREEN_COLOR}下载 Alist v2.6.4 ...${RES}"
+        echo -e "${GREEN_COLOR}下载 Alist v3.9.2 ...${RES}"
         curl -L https://github.com/alist-org/alist/releases/download/v3.9.2/alist-linux-musl-$ARCH.tar.gz -o /tmp/alist.tar.gz $CURL_BAR
         tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/
         if [ -f $INSTALL_PATH/alist-linux-musl-$ARCH ];then
