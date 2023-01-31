@@ -87,7 +87,7 @@ INSTALL() {
     tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/
     
     if [ -f $INSTALL_PATH/alist ];then
-        
+        echo -e "下載成功"
     else
         echo -e "${RED_COLOR}下载 alist-linux-musl-$ARCH.tar.gz 失败！${RES}"
         exit 1;
@@ -176,7 +176,7 @@ UPDATE() {
         curl -L https://github.com/alist-org/alist/releases/download/v3.9.2/alist-linux-musl-$ARCH.tar.gz -o /tmp/alist.tar.gz $CURL_BAR
         tar zxf /tmp/alist.tar.gz -C $INSTALL_PATH/
         if [ -f $INSTALL_PATH/alist ];then
-            
+            echo -e "下載成功"
         else
             echo -e "${RED_COLOR}下载 alist-linux-musl-$ARCH.tar.gz 出错，更新失败！${RES}"
             echo "回退所有更改 ..."
